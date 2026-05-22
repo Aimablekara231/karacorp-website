@@ -1,7 +1,11 @@
 /about /about.html 200
 /ventures /ventures.html 200
 /partners /partners.html 200
+/news /news.html 200
+/careers /careers.html 200
+/data-room /data-room.html 200
 /contact /contact.html 200
+/company-profile /assets/company-profile.pdf 200
 /grain https://grain.karacorp.org 302
 /realty https://realty.karacorp.org 302
 /travel https://travel.karacorp.org 302

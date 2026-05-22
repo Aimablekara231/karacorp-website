@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KaraCorp Ventures | Group Portfolio</title>
     <meta name="description" content="Explore KaraCorp's six-venture portfolio across grain and agriculture, real estate, travel, laundry services, education, and productivity technology.">
+    <link rel="canonical" href="https://karacorp.org/ventures.html">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#12372A">
     <meta property="og:title" content="KaraCorp Ventures">
     <meta property="og:description" content="Six focused ventures under one Tanzanian holding group vision.">
     <meta property="og:type" content="website">
@@ -20,6 +24,7 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
     <header class="site-header" data-header>
       <nav class="nav-shell" aria-label="Primary navigation">
         <a class="brand" href="index.html#home" aria-label="KaraCorp home">
@@ -41,6 +46,7 @@
           <li><a href="about.html#story">About</a></li>
           <li><a href="ventures.html#ventures" aria-current="page">Ventures</a></li>
           <li><a href="partners.html#partners">Partners</a></li>
+          <li><a href="news.html#news">News</a></li>
           <li><a class="nav-cta" href="contact.html#contact">Contact</a></li>
         </ul>
       </nav>
@@ -57,8 +63,17 @@
 
       <section class="page-section" aria-label="Full venture deep dives">
         <div class="container">
+          <div class="filter-bar reveal" aria-label="Filter ventures">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-filter="active" aria-pressed="false">Active</button>
+            <button class="filter-button" type="button" data-filter="launching" aria-pressed="false">Launching</button>
+            <button class="filter-button" type="button" data-filter="coming" aria-pressed="false">Coming Soon</button>
+            <button class="filter-button" type="button" data-filter="trade" aria-pressed="false">Trade</button>
+            <button class="filter-button" type="button" data-filter="services" aria-pressed="false">Services</button>
+            <button class="filter-button" type="button" data-filter="digital" aria-pressed="false">Digital</button>
+          </div>
           <!-- VENTURE DEEP-DIVE: KaraCorp Grain & Agri -->
-          <article class="venture-deep-dive reveal" id="grain">
+          <article class="venture-deep-dive reveal" id="grain" data-filter-tags="active trade">
             <div class="venture-deep-title">
               <span class="venture-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" focusable="false">
@@ -72,6 +87,7 @@
               <span class="status-badge status-active">Active</span>
             </div>
             <div class="venture-deep-copy">
+              <div class="venture-banner media-grain" role="img" aria-label="Illustrated grain and agriculture banner placeholder"></div>
               <p>KaraCorp Grain &amp; Agri is the group's food systems and commodity trade venture. It is focused on structured sourcing, storage readiness, agro-processing partnerships, and market access for Tanzanian grain within domestic and AfCFTA-connected trade channels.</p>
               <ul class="activity-list">
                 <li>Grain aggregation and trade coordination</li>
@@ -86,7 +102,7 @@
           </article>
 
           <!-- VENTURE DEEP-DIVE: KaraCorp Realty -->
-          <article class="venture-deep-dive reveal" id="realty">
+          <article class="venture-deep-dive reveal" id="realty" data-filter-tags="launching real-assets services">
             <div class="venture-deep-title">
               <span class="venture-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" focusable="false">
@@ -99,6 +115,7 @@
               <span class="status-badge status-soon">Launching 2027</span>
             </div>
             <div class="venture-deep-copy">
+              <div class="venture-banner media-realty" role="img" aria-label="Illustrated real estate banner placeholder"></div>
               <p>KaraCorp Realty is the group's real asset and hospitality accommodation platform. The venture will focus on property opportunities that serve residents, businesses, short-stay guests, and institutions in high-potential Tanzanian locations.</p>
               <ul class="activity-list">
                 <li>Residential property development and management</li>
@@ -113,7 +130,7 @@
           </article>
 
           <!-- VENTURE DEEP-DIVE: KaraCorp Travel & Safaris -->
-          <article class="venture-deep-dive reveal" id="travel">
+          <article class="venture-deep-dive reveal" id="travel" data-filter-tags="active services">
             <div class="venture-deep-title">
               <span class="venture-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" focusable="false">
@@ -125,6 +142,7 @@
               <span class="status-badge status-active">Active</span>
             </div>
             <div class="venture-deep-copy">
+              <div class="venture-banner media-travel" role="img" aria-label="Illustrated travel and safaris banner placeholder"></div>
               <p>KaraCorp Travel &amp; Safaris is the group's travel agency and eco-tourism venture. It helps travelers experience Tanzania with thoughtful planning, reliable coordination, and respect for the landscapes and communities that make the country exceptional.</p>
               <ul class="activity-list">
                 <li>Kilimanjaro trekking coordination</li>
@@ -139,7 +157,7 @@
           </article>
 
           <!-- VENTURE DEEP-DIVE: FreshBox -->
-          <article class="venture-deep-dive reveal" id="freshbox">
+          <article class="venture-deep-dive reveal" id="freshbox" data-filter-tags="active services">
             <div class="venture-deep-title">
               <span class="venture-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" focusable="false">
@@ -151,6 +169,7 @@
               <span class="status-badge status-active">Active</span>
             </div>
             <div class="venture-deep-copy">
+              <div class="venture-banner media-freshbox" role="img" aria-label="Illustrated laundry and garment care banner placeholder"></div>
               <p>FreshBox by KaraCorp is a laundry, dry-cleaning, and garment care venture serving residential and institutional customers. It is built around consistency, hygiene, reliable turnaround, and a practical service model for busy households and organizations.</p>
               <ul class="activity-list">
                 <li>Residential laundry and dry cleaning</li>
@@ -165,7 +184,7 @@
           </article>
 
           <!-- VENTURE DEEP-DIVE: Doctrine of Christ Schools -->
-          <article class="venture-deep-dive reveal" id="school">
+          <article class="venture-deep-dive reveal" id="school" data-filter-tags="coming services">
             <div class="venture-deep-title">
               <span class="venture-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" focusable="false">
@@ -178,6 +197,7 @@
               <span class="status-badge status-coming">Coming Soon</span>
             </div>
             <div class="venture-deep-copy">
+              <div class="venture-banner media-school" role="img" aria-label="Illustrated school and learning banner placeholder"></div>
               <p>Doctrine of Christ Schools is the planned faith-based education arm of the group. It is envisioned as an international K-12 school platform that combines academic excellence, moral formation, and preparation for meaningful contribution.</p>
               <ul class="activity-list">
                 <li>Faith-based international school planning</li>
@@ -192,7 +212,7 @@
           </article>
 
           <!-- VENTURE DEEP-DIVE: ClearMind -->
-          <article class="venture-deep-dive reveal" id="mind">
+          <article class="venture-deep-dive reveal" id="mind" data-filter-tags="active digital">
             <div class="venture-deep-title">
               <span class="venture-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" focusable="false">
@@ -202,9 +222,10 @@
                 </svg>
               </span>
               <h2>ClearMind by KaraCorp</h2>
-              <span class="status-badge status-active">Live</span>
+              <span class="status-badge status-live">Live</span>
             </div>
             <div class="venture-deep-copy">
+              <div class="venture-banner media-mind" role="img" aria-label="Illustrated productivity technology banner placeholder"></div>
               <p>ClearMind by KaraCorp is a productivity and NLP capture app for converting unstructured thoughts into clear notes, tasks, and next actions. It represents the group's digital venture track and its interest in practical tools for modern knowledge work.</p>
               <ul class="activity-list">
                 <li>Natural language thought capture</li>
@@ -240,6 +261,9 @@
             <li><a href="about.html#story">About</a></li>
             <li><a href="ventures.html#ventures">Ventures</a></li>
             <li><a href="partners.html#partners">Partners</a></li>
+            <li><a href="news.html#news">News</a></li>
+            <li><a href="careers.html#careers">Careers</a></li>
+            <li><a href="data-room.html#data-room">Data Room</a></li>
             <li><a href="contact.html#contact">Contact</a></li>
           </ul>
           <h2 class="footer-title">Ventures</h2>
@@ -275,5 +299,8 @@
         <div class="container">Copyright 2026 Kara Corp Co Limited | All Rights Reserved</div>
       </div>
     </footer>
+    <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6M12 8v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
   </body>
 </html>

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KaraCorp Partners | Collaboration and Enquiries</title>
     <meta name="description" content="Explore KaraCorp partner categories and submit a partnership enquiry for technology, finance, investment, distribution, or operations collaboration.">
+    <link rel="canonical" href="https://karacorp.org/partners.html">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#12372A">
     <meta property="og:title" content="KaraCorp Partners">
     <meta property="og:description" content="Partnership pathways for technology, finance, investment, distribution, and operations collaborators.">
     <meta property="og:type" content="website">
@@ -20,6 +24,7 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
     <header class="site-header" data-header>
       <nav class="nav-shell" aria-label="Primary navigation">
         <a class="brand" href="index.html#home" aria-label="KaraCorp home">
@@ -41,6 +46,7 @@
           <li><a href="about.html#story">About</a></li>
           <li><a href="ventures.html#ventures">Ventures</a></li>
           <li><a href="partners.html#partners" aria-current="page">Partners</a></li>
+          <li><a href="news.html#news">News</a></li>
           <li><a class="nav-cta" href="contact.html#contact">Contact</a></li>
         </ul>
       </nav>
@@ -52,6 +58,33 @@
           <!-- EDIT: Partners Page Headline -->
           <h1>Partners for durable African enterprise.</h1>
           <p>KaraCorp collaborates with serious organizations that strengthen execution across technology, finance, distribution, logistics, and institutional operations. This page uses placeholder partner cards until official logos and partner approvals are added.</p>
+        </div>
+      </section>
+
+      <section class="page-section alt" id="journey">
+        <div class="container">
+          <div class="section-header center reveal">
+            <span class="section-label">Partnership Journey</span>
+            <h2>How serious collaboration moves forward.</h2>
+            <p>KaraCorp uses a simple, documented process so partnership conversations stay focused and professional.</p>
+          </div>
+          <div class="journey-grid">
+            <article class="journey-card reveal">
+              <span class="journey-step">1</span>
+              <h3>Introduce</h3>
+              <p>Submit a concise proposal, supplier profile, investment interest, or institutional collaboration note.</p>
+            </article>
+            <article class="journey-card reveal">
+              <span class="journey-step">2</span>
+              <h3>Align</h3>
+              <p>The group reviews strategic fit, venture relevance, counterpart credibility, and practical next steps.</p>
+            </article>
+            <article class="journey-card reveal">
+              <span class="journey-step">3</span>
+              <h3>Formalize</h3>
+              <p>Qualified opportunities move into documented terms, pilot scope, procurement review, or leadership discussion.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -160,7 +193,12 @@
             <p>Use this form for technology partnerships, supplier introductions, investment conversations, distribution proposals, or institutional collaboration. Submissions open through your email client and are addressed to info@karacorp.org.</p>
           </div>
           <div class="contact-card reveal">
-            <form class="enquiry-form" action="mailto:info@karacorp.org" method="post" enctype="text/plain" data-mailto-form data-recipient="info@karacorp.org" data-subject="KaraCorp partnership enquiry">
+            <form class="enquiry-form" action="mailto:info@karacorp.org" method="post" enctype="text/plain" data-mailto-form data-endpoint="/api/contact" data-recipient="info@karacorp.org" data-subject="KaraCorp partnership enquiry">
+              <input type="hidden" name="form_type" value="Partnership enquiry">
+              <div class="form-field trap">
+                <label for="partner-website">Website</label>
+                <input id="partner-website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
               <div class="form-grid">
                 <div class="form-field">
                   <label for="partner-name">Full name</label>
@@ -219,6 +257,9 @@
             <li><a href="about.html#story">About</a></li>
             <li><a href="ventures.html#ventures">Ventures</a></li>
             <li><a href="partners.html#partners">Partners</a></li>
+            <li><a href="news.html#news">News</a></li>
+            <li><a href="careers.html#careers">Careers</a></li>
+            <li><a href="data-room.html#data-room">Data Room</a></li>
             <li><a href="contact.html#contact">Contact</a></li>
           </ul>
           <h2 class="footer-title">Ventures</h2>
@@ -254,5 +295,8 @@
         <div class="container">Copyright 2026 Kara Corp Co Limited | All Rights Reserved</div>
       </div>
     </footer>
+    <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6M12 8v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
   </body>
 </html>

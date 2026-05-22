@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KaraCorp Company Limited | Building Tanzania's Future</title>
     <meta name="description" content="KaraCorp Company Limited is a Tanzanian holding group based in Arusha, building ventures across agriculture, real estate, travel, services, education, and productivity technology.">
+    <link rel="canonical" href="https://karacorp.org/">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#12372A">
     <meta property="og:title" content="KaraCorp Company Limited">
     <meta property="og:description" content="Building Tanzania's Future, One Venture at a Time.">
     <meta property="og:type" content="website">
@@ -15,11 +19,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Kara Corp Company Limited",
+        "alternateName": "KaraCorp",
+        "url": "https://karacorp.org/",
+        "logo": "https://karacorp.org/assets/favicon.svg",
+        "foundingDate": "2026",
+        "slogan": "Building Tanzania's Future, One Venture at a Time",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Arusha",
+          "addressCountry": "TZ"
+        },
+        "founder": [
+          { "@type": "Person", "name": "Aimable Mhina Karamaga" },
+          { "@type": "Person", "name": "Vivian Bazil Deus" }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/company/karacorp",
+          "https://www.instagram.com/karacorp"
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
     <header class="site-header" data-header>
       <nav class="nav-shell" aria-label="Primary navigation">
         <a class="brand" href="index.html#home" aria-label="KaraCorp home">
@@ -41,6 +71,7 @@
           <li><a href="about.html#story">About</a></li>
           <li><a href="ventures.html#ventures">Ventures</a></li>
           <li><a href="partners.html#partners">Partners</a></li>
+          <li><a href="news.html#news">News</a></li>
           <li><a class="nav-cta" href="contact.html#contact">Contact</a></li>
         </ul>
       </nav>
@@ -63,11 +94,11 @@
         <div class="container">
           <div class="impact-inner">
             <div class="impact-item">
-              <strong>6</strong>
+              <strong data-count-to="6">0</strong>
               <span>Active Ventures</span>
             </div>
             <div class="impact-item">
-              <strong>2026</strong>
+              <strong data-count-to="2026">0</strong>
               <span>Established</span>
             </div>
             <div class="impact-item">
@@ -75,7 +106,7 @@
               <span>Tanzania</span>
             </div>
             <div class="impact-item">
-              <strong>2</strong>
+              <strong data-count-to="2">0</strong>
               <span>Founding Partners</span>
             </div>
           </div>
@@ -93,6 +124,7 @@
           <div class="venture-grid">
             <!-- VENTURE CARD: KaraCorp Grain & Agri -->
             <article class="venture-card reveal">
+              <div class="venture-media media-grain" role="img" aria-label="Illustrated grain trade and agriculture image placeholder"></div>
               <span class="venture-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" focusable="false">
                   <path d="M24 40V12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -112,6 +144,7 @@
 
             <!-- VENTURE CARD: KaraCorp Realty -->
             <article class="venture-card reveal">
+              <div class="venture-media media-realty" role="img" aria-label="Illustrated real estate image placeholder"></div>
               <span class="venture-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" focusable="false">
                   <path d="M8 24 24 11l16 13" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -130,6 +163,7 @@
 
             <!-- VENTURE CARD: KaraCorp Travel & Safaris -->
             <article class="venture-card reveal">
+              <div class="venture-media media-travel" role="img" aria-label="Illustrated Tanzanian travel and safari image placeholder"></div>
               <span class="venture-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" focusable="false">
                   <path d="M5 36h38L32 19l-8 11-5-7L5 36Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
@@ -147,6 +181,7 @@
 
             <!-- VENTURE CARD: FreshBox -->
             <article class="venture-card reveal">
+              <div class="venture-media media-freshbox" role="img" aria-label="Illustrated laundry and garment care image placeholder"></div>
               <span class="venture-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" focusable="false">
                   <path d="M17 10 9 15l5 8 4-2v18h12V21l4 2 5-8-8-5c-2 4-12 4-14 0Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
@@ -164,6 +199,7 @@
 
             <!-- VENTURE CARD: Doctrine of Christ Schools -->
             <article class="venture-card reveal">
+              <div class="venture-media media-school" role="img" aria-label="Illustrated school and education image placeholder"></div>
               <span class="venture-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" focusable="false">
                   <path d="M8 12h14c4 0 7 3 7 7v19c0-4-3-7-7-7H8V12Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
@@ -182,6 +218,7 @@
 
             <!-- VENTURE CARD: ClearMind -->
             <article class="venture-card reveal">
+              <div class="venture-media media-mind" role="img" aria-label="Illustrated productivity technology image placeholder"></div>
               <span class="venture-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" focusable="false">
                   <path d="M24 9v30" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -193,9 +230,55 @@
               <p class="venture-tagline">Capture thoughts. Turn them into action.</p>
               <p>ClearMind is a productivity and NLP capture app for turning scattered thinking into structured next steps. It extends KaraCorp's portfolio into practical digital tools for modern work.</p>
               <div class="card-footer">
-                <span class="status-badge status-active">Live</span>
+                <span class="status-badge status-live">Live</span>
                 <a class="btn btn-small btn-outline" href="https://mind.karacorp.org" target="_blank" rel="noopener">Visit Site</a>
               </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section alt" id="portfolio-wheel">
+        <div class="container">
+          <div class="section-header center reveal">
+            <span class="section-label">Group Architecture</span>
+            <h2>One holding group, six venture engines.</h2>
+            <p>KaraCorp gives each venture its own operating focus while holding the shared standards, governance, and long-term group identity at the center.</p>
+          </div>
+          <div class="portfolio-wheel reveal" aria-label="KaraCorp portfolio wheel">
+            <div class="wheel-center">KC</div>
+            <div class="wheel-node">Grain &amp; Agri</div>
+            <div class="wheel-node">Realty</div>
+            <div class="wheel-node">Travel &amp; Safaris</div>
+            <div class="wheel-node">FreshBox</div>
+            <div class="wheel-node">Doctrine Schools</div>
+            <div class="wheel-node">ClearMind</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="strategy">
+        <div class="container">
+          <div class="section-header center reveal">
+            <span class="section-label">Group Strategy</span>
+            <h2>A disciplined investment logic for practical sectors.</h2>
+            <p>KaraCorp is built around sectors that touch daily life, institutional demand, regional trade, and the future of work.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <span class="feature-number">1</span>
+              <h3>Essential Sectors</h3>
+              <p>Food systems, property, travel, services, education, and productivity technology create a portfolio connected to real demand.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-number">2</span>
+              <h3>Tanzania-First Execution</h3>
+              <p>The group starts from Arusha and builds with a grounded understanding of Tanzanian customers, institutions, and operating realities.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-number">3</span>
+              <h3>Regional Upside</h3>
+              <p>Selected ventures are positioned for wider East African and AfCFTA-linked opportunities where KaraCorp can trade, serve, and partner.</p>
             </article>
           </div>
         </div>
@@ -224,6 +307,24 @@
         </div>
       </section>
 
+      <section class="page-section alt" id="founders-message">
+        <div class="container founders-message">
+          <div class="split-copy reveal">
+            <span class="section-label">Message from the Founders</span>
+            <h2>Built with patience, structure, and conviction.</h2>
+            <p>KaraCorp exists because Tanzania's opportunity deserves companies that can think beyond one product, one season, or one transaction. We are building a group that can compound trust across sectors and generations.</p>
+            <p>Our work is practical: serve real customers, honor partnerships, and create ventures that can stand on discipline rather than noise.</p>
+          </div>
+          <div class="signature-panel reveal">
+            <blockquote>We are building KaraCorp as a house of ventures with a Tanzanian heart and an African horizon.</blockquote>
+            <div class="signature-row">
+              <span>Aimable Mhina Karamaga</span>
+              <span>Vivian Bazil Deus</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="about-teaser reveal" id="about">
         <div class="container about-teaser-grid">
           <blockquote class="founder-quote">
@@ -236,6 +337,68 @@
             <p>Founded in 2026, KaraCorp brings accounting discipline, education insight, and entrepreneurial execution into one group platform.</p>
             <p>The group is registered in Tanzania under the Companies Act Cap. 212 and built to house ventures that can serve communities, institutions, and regional trade.</p>
             <a class="btn btn-outline" href="about.html#story">Our Story</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="profile">
+        <div class="container">
+          <div class="profile-card reveal">
+            <div>
+              <span class="section-label">Company Profile</span>
+              <h3>Download the KaraCorp corporate profile.</h3>
+              <p>A concise institutional profile for banks, investors, suppliers, partners, and collaborators who need a structured overview of the group.</p>
+              <div class="profile-meta">
+                <span>PDF</span>
+                <span>Group Overview</span>
+                <span>Portfolio Summary</span>
+              </div>
+            </div>
+            <a class="btn btn-primary" href="assets/company-profile.pdf" target="_blank" rel="noopener">Download Profile</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section alt" id="footprint">
+        <div class="container">
+          <div class="map-card reveal">
+            <div class="map-route" aria-hidden="true"></div>
+            <h3>Tanzania roots, regional routes.</h3>
+            <p>The portfolio is anchored in Arusha, with natural links to Kilimanjaro, northern tourism circuits, Dar es Salaam commercial channels, and future AfCFTA-aligned trade routes.</p>
+            <span class="map-pin pin-arusha">Arusha</span>
+            <span class="map-pin pin-kilimanjaro">Kilimanjaro</span>
+            <span class="map-pin pin-dar">Dar es Salaam</span>
+            <span class="map-pin pin-afcfta">AfCFTA</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="latest">
+        <div class="container">
+          <div class="section-header center reveal">
+            <span class="section-label">Latest Updates</span>
+            <h2>Signals from the group.</h2>
+            <p>Use this space for venture launches, partnership notes, market updates, and founder announcements.</p>
+          </div>
+          <div class="news-grid">
+            <article class="news-card reveal">
+              <span class="news-date">May 2026</span>
+              <h3>KaraCorp establishes the group platform in Arusha.</h3>
+              <p>The holding company begins with a six-venture structure spanning trade, property, tourism, services, education, and technology.</p>
+            </article>
+            <article class="news-card reveal">
+              <span class="news-date">2026</span>
+              <h3>ClearMind joins the portfolio as a live digital venture.</h3>
+              <p>The productivity capture app represents KaraCorp's technology track and commitment to practical tools for modern work.</p>
+            </article>
+            <article class="news-card reveal">
+              <span class="news-date">2027 Plan</span>
+              <h3>KaraCorp Realty prepares for launch.</h3>
+              <p>The real estate venture is planned around residential, commercial, Airbnb, and serviced-apartment opportunities.</p>
+            </article>
+          </div>
+          <div class="section-actions">
+            <a class="btn btn-outline" href="news.html#news">View All Updates</a>
           </div>
         </div>
       </section>
@@ -275,6 +438,9 @@
             <li><a href="about.html#story">About</a></li>
             <li><a href="ventures.html#ventures">Ventures</a></li>
             <li><a href="partners.html#partners">Partners</a></li>
+            <li><a href="news.html#news">News</a></li>
+            <li><a href="careers.html#careers">Careers</a></li>
+            <li><a href="data-room.html#data-room">Data Room</a></li>
             <li><a href="contact.html#contact">Contact</a></li>
           </ul>
           <h2 class="footer-title">Ventures</h2>
@@ -310,5 +476,8 @@
         <div class="container">Copyright 2026 Kara Corp Co Limited | All Rights Reserved</div>
       </div>
     </footer>
+    <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6M12 8v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
   </body>
 </html>

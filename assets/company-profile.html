@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>KaraCorp Company Profile</title>
+    <style>
+      :root {
+        --green: #12372A;
+        --dark: #071B13;
+        --gold: #C99A2E;
+        --ivory: #F7F3EA;
+        --text: #151A17;
+        --muted: #66736C;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: var(--text);
+        background: var(--ivory);
+        font-family: Arial, sans-serif;
+        line-height: 1.55;
+      }
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 22mm;
+        background: white;
+      }
+      .cover {
+        min-height: 250mm;
+        display: grid;
+        align-content: center;
+        background: linear-gradient(135deg, var(--green), var(--dark));
+        color: white;
+        margin: -22mm -22mm 18mm;
+        padding: 28mm;
+      }
+      h1, h2, h3 { margin: 0; font-family: Georgia, serif; line-height: 1.05; }
+      h1 { font-size: 50pt; }
+      h2 { margin-top: 18mm; font-size: 24pt; color: var(--green); }
+      h3 { margin-top: 8mm; font-size: 15pt; color: var(--dark); }
+      p { margin: 4mm 0 0; }
+      .tagline { margin-top: 8mm; font-size: 18pt; color: #F7F3EA; }
+      .gold-line { width: 42mm; height: 1.5mm; margin: 12mm 0; background: var(--gold); }
+      .meta, .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6mm; }
+      .card {
+        padding: 6mm;
+        border: 1px solid #E2DACB;
+        border-left: 2mm solid var(--gold);
+      }
+      .muted { color: var(--muted); }
+      ul { margin: 4mm 0 0; padding-left: 6mm; }
+      li { margin: 2mm 0; }
+      footer { margin-top: 18mm; padding-top: 6mm; border-top: 1px solid #E2DACB; color: var(--muted); font-size: 9pt; }
+      @page { size: A4; margin: 0; }
+      @media print {
+        body { background: white; }
+        .page { margin: 0; box-shadow: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="cover">
+        <h1>KaraCorp Company Limited</h1>
+        <div class="gold-line"></div>
+        <p class="tagline">Building Tanzania's Future, One Venture at a Time</p>
+        <p>Corporate Holding Group Profile | Arusha, Tanzania | Established 2026</p>
+      </section>
+
+      <section>
+        <h2>Group Overview</h2>
+        <p>Kara Corp Company Limited is a Tanzanian private limited company based in Arusha and registered under the Companies Act Cap. 212. The group serves as the corporate holding platform for ventures in agriculture, real estate, travel, services, education, and productivity technology.</p>
+        <div class="meta">
+          <div class="card"><strong>Founders</strong><br>Aimable Mhina Karamaga and Vivian Bazil Deus</div>
+          <div class="card"><strong>Location</strong><br>Arusha, United Republic of Tanzania</div>
+          <div class="card"><strong>Established</strong><br>2026</div>
+          <div class="card"><strong>Portfolio</strong><br>Six venture platforms</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Portfolio</h2>
+        <div class="grid">
+          <div class="card"><h3>KaraCorp Grain &amp; Agri</h3><p>Grain trade, agro-processing, and AfCFTA-linked market access.</p></div>
+          <div class="card"><h3>KaraCorp Realty</h3><p>Residential, commercial, Airbnb, and serviced-apartment opportunities.</p></div>
+          <div class="card"><h3>KaraCorp Travel &amp; Safaris</h3><p>Travel agency, eco-tourism, Kilimanjaro, and Serengeti experiences.</p></div>
+          <div class="card"><h3>FreshBox by KaraCorp</h3><p>Laundry, dry cleaning, residential, and institutional garment care.</p></div>
+          <div class="card"><h3>Doctrine of Christ Schools</h3><p>Planned faith-based international K-12 education platform.</p></div>
+          <div class="card"><h3>ClearMind by KaraCorp</h3><p>Live productivity and NLP capture application.</p></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Strategic Logic</h2>
+        <ul>
+          <li>Build in essential sectors connected to real demand.</li>
+          <li>Start with Tanzanian execution and expand through credible regional relationships.</li>
+          <li>Use governance, documentation, and operating discipline as group advantages.</li>
+          <li>Partner with institutions, suppliers, investors, and technology providers who share a long-term view.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> info@karacorp.org</p>
+        <p><strong>Website:</strong> karacorp.org</p>
+        <p><strong>Office Base:</strong> Arusha, Tanzania</p>
+      </section>
+
+      <footer>
+        Copyright 2026 Kara Corp Co Limited | All Rights Reserved
+      </footer>
+    </main>
+  </body>
+</html>

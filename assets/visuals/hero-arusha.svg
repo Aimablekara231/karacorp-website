@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Arusha-inspired corporate landscape</title>
+  <desc id="desc">A premium illustrated Tanzanian landscape with Mount Meru, farmland, and city silhouettes for the KaraCorp hero.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12372A"/>
+      <stop offset="0.55" stop-color="#0B2419"/>
+      <stop offset="1" stop-color="#071B13"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.78" cy="0.22" r="0.34">
+      <stop offset="0" stop-color="#E3B94F" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#E3B94F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#12372A"/>
+      <stop offset="1" stop-color="#1B4332"/>
+    </linearGradient>
+  </defs>
+  <rect width="1800" height="1100" fill="url(#sky)"/>
+  <rect width="1800" height="1100" fill="url(#sun)"/>
+  <path d="M0 610 C220 505 358 570 518 452 C692 322 810 472 942 404 C1104 320 1220 468 1390 420 C1540 378 1640 428 1800 362 L1800 1100 L0 1100 Z" fill="#0D2818" opacity="0.82"/>
+  <path d="M0 720 C240 648 412 690 594 610 C770 532 900 626 1050 584 C1230 534 1340 620 1518 562 C1640 522 1728 536 1800 520 L1800 1100 L0 1100 Z" fill="url(#land)" opacity="0.76"/>
+  <path d="M0 858 C260 790 514 808 794 766 C1112 718 1330 738 1800 660 L1800 1100 L0 1100 Z" fill="#071B13" opacity="0.72"/>
+  <g opacity="0.5" stroke="#C99A2E" stroke-width="2">
+    <path d="M80 916 C390 852 680 842 1040 796 C1320 760 1560 724 1760 682" fill="none"/>
+    <path d="M40 978 C346 910 704 900 1034 854 C1322 814 1510 774 1800 728" fill="none"/>
+    <path d="M180 1034 C506 950 822 944 1164 890 C1410 850 1580 818 1800 778" fill="none"/>
+  </g>
+  <g fill="#F7F3EA" opacity="0.08">
+    <rect x="1080" y="598" width="26" height="88"/>
+    <rect x="1120" y="570" width="34" height="116"/>
+    <rect x="1170" y="620" width="28" height="66"/>
+    <rect x="1216" y="588" width="42" height="98"/>
+    <rect x="1278" y="636" width="34" height="50"/>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+{
+  "name": "KaraCorp Company Limited",
+  "short_name": "KaraCorp",
+  "description": "Building Tanzania's Future, One Venture at a Time.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F3EA",
+  "theme_color": "#12372A",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

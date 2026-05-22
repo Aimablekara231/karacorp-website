@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KaraCorp Careers | Talent Interest</title>
+    <meta name="description" content="Register interest in future KaraCorp venture roles, internships, operator opportunities, and partner talent opportunities.">
+    <link rel="canonical" href="https://karacorp.org/careers.html">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#12372A">
+    <meta property="og:title" content="KaraCorp Careers">
+    <meta property="og:description" content="Register interest in future venture roles and talent opportunities at KaraCorp.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karacorp.org/careers.html">
+    <meta property="og:site_name" content="KaraCorp">
+    <meta property="og:image" content="https://karacorp.org/assets/og-card.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+    <header class="site-header" data-header>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="index.html#home" aria-label="KaraCorp home">
+          <span class="brand-mark">KC</span>
+          <span class="brand-text"><span class="brand-name">KaraCorp</span><span class="brand-subtitle">Company Limited</span></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-nav-toggle>
+          <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+        <ul class="nav-menu" id="primary-navigation" data-nav-menu>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="about.html#story">About</a></li>
+          <li><a href="ventures.html#ventures">Ventures</a></li>
+          <li><a href="partners.html#partners">Partners</a></li>
+          <li><a href="news.html#news">News</a></li>
+          <li><a class="nav-cta" href="contact.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero reveal" id="careers">
+        <div class="container">
+          <!-- EDIT: Careers Page Headline -->
+          <h1>Build with a Tanzanian group from the ground up.</h1>
+          <p>KaraCorp is assembling a long-term talent network for venture operators, interns, service leaders, educators, travel professionals, property managers, finance talent, and digital builders.</p>
+        </div>
+      </section>
+
+      <section class="page-section" id="talent-pathways">
+        <div class="container">
+          <div class="section-header center reveal">
+            <span class="section-label">Talent Pathways</span>
+            <h2>Different ventures, one operating standard.</h2>
+            <p>Even before roles are publicly open, KaraCorp welcomes serious talent introductions from people who want to grow with the portfolio.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal"><span class="feature-number">1</span><h3>Venture Operators</h3><p>People who can run processes, serve customers, manage teams, and turn plans into daily execution.</p></article>
+            <article class="feature-card reveal"><span class="feature-number">2</span><h3>Specialist Talent</h3><p>Finance, logistics, hospitality, education, property, technology, marketing, and customer success professionals.</p></article>
+            <article class="feature-card reveal"><span class="feature-number">3</span><h3>Early-Career Builders</h3><p>Interns and graduates who want responsibility, discipline, mentorship, and exposure to multiple sectors.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section alt" id="talent-interest">
+        <div class="container contact-grid">
+          <div class="split-copy reveal">
+            <span class="section-label">Talent Interest</span>
+            <h2>Join the future talent pool.</h2>
+            <p>This is not a guarantee of employment. It is a professional way to introduce yourself before specific venture roles are announced.</p>
+          </div>
+          <div class="contact-card reveal">
+            <form class="contact-form" action="mailto:info@karacorp.org" method="post" enctype="text/plain" data-mailto-form data-endpoint="/api/contact" data-recipient="info@karacorp.org" data-subject="KaraCorp talent interest">
+              <input type="hidden" name="form_type" value="Talent interest">
+              <div class="form-field trap">
+                <label for="career-website">Website</label>
+                <input id="career-website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="form-grid">
+                <div class="form-field"><label for="career-name">Full name</label><input id="career-name" name="full_name" type="text" autocomplete="name" required></div>
+                <div class="form-field"><label for="career-email">Email address</label><input id="career-email" name="email" type="email" autocomplete="email" required></div>
+                <div class="form-field"><label for="career-phone">Phone</label><input id="career-phone" name="phone" type="tel" autocomplete="tel"></div>
+                <div class="form-field">
+                  <label for="career-category">Area of interest</label>
+                  <select id="career-category" name="topic" required>
+                    <option value="">Select area</option>
+                    <option>Operations</option>
+                    <option>Finance</option>
+                    <option>Travel &amp; Hospitality</option>
+                    <option>Property</option>
+                    <option>Education</option>
+                    <option>Technology</option>
+                    <option>Internship</option>
+                  </select>
+                </div>
+                <div class="form-field full"><label for="career-message">Why KaraCorp?</label><textarea id="career-message" name="message" placeholder="Summarize your experience, interests, and the venture area you want to support." required></textarea></div>
+              </div>
+              <div class="form-actions"><button class="btn btn-primary" type="submit">Register Interest</button></div>
+              <p class="form-status" data-form-status aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand"><a class="brand" href="index.html#home" aria-label="KaraCorp home"><span class="brand-mark">KC</span><span class="brand-text"><span class="brand-name">KaraCorp</span><span class="brand-subtitle">Company Limited</span></span></a><p>Building Tanzania's Future, One Venture at a Time.</p><p>A registered company in Tanzania.</p></div>
+        <div>
+          <h2 class="footer-title">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="about.html#story">About</a></li><li><a href="ventures.html#ventures">Ventures</a></li><li><a href="partners.html#partners">Partners</a></li><li><a href="news.html#news">News</a></li><li><a href="careers.html#careers">Careers</a></li><li><a href="data-room.html#data-room">Data Room</a></li><li><a href="contact.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div><h2 class="footer-title">Contact</h2><ul class="footer-contact"><li>Arusha, Tanzania</li><li><a href="mailto:info@karacorp.org">info@karacorp.org</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><div class="container">Copyright 2026 Kara Corp Co Limited | All Rights Reserved</div></div>
+    </footer>
+    <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6M12 8v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </body>
+</html>
