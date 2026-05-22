@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">KaraCorp Company Limited</title>
+  <desc id="desc">Building Tanzania's Future, One Venture at a Time</desc>
+  <defs>
+    <radialGradient id="gold" cx="24%" cy="24%" r="70%">
+      <stop offset="0%" stop-color="#D4A017" stop-opacity="0.5"/>
+      <stop offset="54%" stop-color="#1B4332" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0D2818"/>
+    </radialGradient>
+    <linearGradient id="forest" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#0D2818"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#forest)"/>
+  <rect width="1200" height="630" fill="url(#gold)" opacity="0.86"/>
+  <path d="M94 506H1106" stroke="#D4A017" stroke-width="4" stroke-linecap="round"/>
+  <text x="94" y="172" fill="#F9F6F0" font-family="Georgia, serif" font-size="74" font-weight="700">KaraCorp</text>
+  <text x="94" y="246" fill="#F9F6F0" font-family="Arial, sans-serif" font-size="28" font-weight="700">KARA CORP COMPANY LIMITED</text>
+  <text x="94" y="344" fill="#FFFFFF" font-family="Georgia, serif" font-size="58" font-weight="700">Building Tanzania's Future,</text>
+  <text x="94" y="414" fill="#FFFFFF" font-family="Georgia, serif" font-size="58" font-weight="700">One Venture at a Time</text>
+  <text x="94" y="562" fill="#F9F6F0" font-family="Arial, sans-serif" font-size="26">Arusha, Tanzania | Six-venture holding group</text>
+</svg>
