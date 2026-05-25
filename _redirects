@@ -5,6 +5,9 @@
 /careers /careers.html 200
 /data-room /data-room.html 200
 /contact /contact.html 200
+/leadership /leadership.html 200
+/aimable /aimable.html 200
+/vivian /vivian.html 200
 /company-profile /assets/company-profile.pdf 200
 /grain https://grain.karacorp.org 302
 /realty https://realty.karacorp.org 302
@@ -14,3 +17,5 @@
 /mind https://mind.karacorp.org 302
 /consulting /consulting.html 200
 /mining /mining.html 200
+https://aimable.karacorp.org/* /aimable.html 200
+https://vivian.karacorp.org/* /vivian.html 200

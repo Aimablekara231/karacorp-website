@@ -10,6 +10,8 @@ const progressBar = document.querySelector('[data-scroll-progress]');
 const filterButtons = document.querySelectorAll('[data-filter]');
 const filterItems = document.querySelectorAll('[data-filter-tags]');
 const backToTop = document.querySelector('[data-back-to-top]');
+const trackedElements = document.querySelectorAll('[data-track]');
+const motionSurfaces = document.querySelectorAll('.venture-card, .founder-card, .feature-card, .news-card, .profile-card, .contact-card, .partner-card, .journey-card, .governance-card, .value-card, .timeline-item, .leadership-card, .nfc-panel');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 document.body.classList.add('is-loading');
@@ -34,7 +36,11 @@ window.addEventListener('scroll', updateScrollProgress, { passive: true });
 window.addEventListener('resize', updateScrollProgress);
 window.addEventListener('load', () => {
   document.body.classList.remove('is-loading');
+  document.body.classList.remove('is-leaving');
   updateScrollProgress();
+});
+window.addEventListener('pageshow', () => {
+  document.body.classList.remove('is-loading', 'is-leaving');
 });
 
 function updateBackToTop() {
@@ -74,6 +80,33 @@ if (navToggle && navMenu) {
     }
   });
 }
+
+function isTransitionableLink(link) {
+  if (!link || reduceMotion) return false;
+  if (link.target && link.target !== '_self') return false;
+  if (link.hasAttribute('download')) return false;
+  if (!link.href) return false;
+
+  const url = new URL(link.href, window.location.href);
+  if (url.origin !== window.location.origin) return false;
+  if (url.protocol !== 'http:' && url.protocol !== 'https:') return false;
+  if (url.pathname === window.location.pathname && url.hash) return false;
+
+  return true;
+}
+
+document.querySelectorAll('a[href]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (!isTransitionableLink(link)) return;
+
+    event.preventDefault();
+    document.body.classList.add('is-leaving');
+    window.setTimeout(() => {
+      window.location.href = link.href;
+    }, 320);
+  });
+});
 
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(
@@ -154,6 +187,52 @@ function highlightTargetFromHash(hash) {
   target.classList.remove('anchor-highlight');
   void target.offsetWidth;
   target.classList.add('anchor-highlight');
+}
+
+function trackInteraction(name, detail) {
+  if (!name) return;
+
+  window.dispatchEvent(new CustomEvent('karacorp:track', { detail: { name, detail } }));
+
+  if (typeof window.plausible === 'function') {
+    window.plausible(name, detail ? { props: { detail } } : undefined);
+  }
+
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', name, detail ? { event_label: detail } : undefined);
+  }
+}
+
+trackedElements.forEach((element) => {
+  element.addEventListener('click', () => {
+    trackInteraction(element.dataset.track, element.dataset.trackDetail || '');
+  });
+});
+
+if (!reduceMotion) {
+  motionSurfaces.forEach((surface) => {
+    surface.classList.add('is-motion-surface');
+
+    surface.addEventListener('pointermove', (event) => {
+      const rect = surface.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      const rotateY = ((x / rect.width) - 0.5) * 8;
+      const rotateX = (0.5 - (y / rect.height)) * 7;
+
+      surface.style.setProperty('--pointer-x', `${x}px`);
+      surface.style.setProperty('--pointer-y', `${y}px`);
+      surface.style.setProperty('--rotate-x', `${rotateX.toFixed(2)}deg`);
+      surface.style.setProperty('--rotate-y', `${rotateY.toFixed(2)}deg`);
+    });
+
+    surface.addEventListener('pointerleave', () => {
+      surface.style.removeProperty('--pointer-x');
+      surface.style.removeProperty('--pointer-y');
+      surface.style.removeProperty('--rotate-x');
+      surface.style.removeProperty('--rotate-y');
+    });
+  });
 }
 
 document.querySelectorAll('a[href*="#"]').forEach((link) => {
