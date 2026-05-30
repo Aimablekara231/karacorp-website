@@ -45,7 +45,7 @@
           <h1>Tanzania journeys built around places people actually want to remember.</h1>
           <p>Kara Travel &amp; Safaris is structured for clear planning, destination-led experiences, and dependable coordination across trekking, safaris, and custom travel in Tanzania.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="contact.html#contact">Plan a Journey</a>
+            <a class="btn btn-primary" href="#plan">Plan a Journey</a>
             <a class="btn btn-secondary" href="#destinations">View Destinations</a>
           </div>
         </div>
@@ -167,6 +167,98 @@
         </div>
       </section>
 
+      <section class="page-section" id="plan">
+        <div class="container contact-grid">
+          <div class="split-copy reveal">
+            <span class="section-label">Journey Brief</span>
+            <h2>Tell us the shape of the trip you want.</h2>
+            <p>Use this short planning form to share the essentials of your travel idea. Kara Travel &amp; Safaris can then respond with the next step, destination guidance, or itinerary direction based on what you are actually trying to plan.</p>
+            <p>This is different from the general group enquiry form. It is built specifically for travel planning.</p>
+          </div>
+          <div class="contact-card reveal">
+            <h2>Plan a Journey</h2>
+            <form class="contact-form" action="mailto:info@karacorp.org" method="post" enctype="text/plain" data-mailto-form data-endpoint="/api/contact" data-recipient="info@karacorp.org" data-subject="Kara Travel journey brief">
+              <input type="hidden" name="form_type" value="Travel planning request">
+              <div class="form-field trap">
+                <label for="travel-website">Website</label>
+                <input id="travel-website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="travel-name">Full name</label>
+                  <input id="travel-name" name="full_name" type="text" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                  <label for="travel-email">Email address</label>
+                  <input id="travel-email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                  <label for="travel-phone">WhatsApp / phone</label>
+                  <input id="travel-phone" name="phone" type="tel" autocomplete="tel">
+                </div>
+                <div class="form-field">
+                  <label for="travel-type">What kind of trip are you planning?</label>
+                  <select id="travel-type" name="travel_type" required>
+                    <option value="">Select trip type</option>
+                    <option>Safari</option>
+                    <option>Kilimanjaro Trek</option>
+                    <option>Family Trip</option>
+                    <option>Honeymoon</option>
+                    <option>Private Tour</option>
+                    <option>Corporate / Group Travel</option>
+                    <option>Custom Itinerary</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="travel-destination">Destination interest</label>
+                  <select id="travel-destination" name="destination_interest" required>
+                    <option value="">Select destination</option>
+                    <option>Mount Kilimanjaro</option>
+                    <option>Serengeti</option>
+                    <option>Ngorongoro</option>
+                    <option>Tarangire</option>
+                    <option>Arusha</option>
+                    <option>Multiple destinations</option>
+                    <option>Custom itinerary</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="travel-guests">Number of travelers</label>
+                  <input id="travel-guests" name="travelers" type="number" min="1" step="1" placeholder="e.g. 2">
+                </div>
+                <div class="form-field">
+                  <label for="travel-month">Preferred travel month</label>
+                  <input id="travel-month" name="preferred_month" type="text" placeholder="e.g. August 2026">
+                </div>
+                <div class="form-field">
+                  <label for="travel-days">Number of days</label>
+                  <input id="travel-days" name="trip_days" type="number" min="1" step="1" placeholder="e.g. 7">
+                </div>
+                <div class="form-field">
+                  <label for="travel-budget">Budget range</label>
+                  <select id="travel-budget" name="budget_range">
+                    <option value="">Select range</option>
+                    <option>Economy</option>
+                    <option>Mid-range</option>
+                    <option>Premium</option>
+                    <option>Luxury</option>
+                  </select>
+                </div>
+                <div class="form-field full">
+                  <label for="travel-notes">Tell us about your ideal journey</label>
+                  <textarea id="travel-notes" name="message" placeholder="Share dates, traveler mix, destinations, or anything important for the trip." required></textarea>
+                </div>
+              </div>
+              <p class="form-note">Prefer direct email? <a class="text-link" href="mailto:info@karacorp.org?subject=Kara%20Travel%20journey%20brief">info@karacorp.org</a></p>
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Send Journey Brief</button>
+              </div>
+              <p class="form-status" data-form-status aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
       <section class="cta-band reveal">
         <div class="container">
           <div class="cta-panel">
@@ -175,7 +267,7 @@
               <p>Add your travel photography to the folder system, then use this page as the direct destination for guests coming from the KaraCorp homepage.</p>
             </div>
             <div class="section-actions">
-              <a class="btn btn-primary" href="contact.html#contact">Plan a Journey</a>
+              <a class="btn btn-primary" href="#plan">Plan a Journey</a>
               <a class="btn btn-secondary" href="https://travel.karacorp.org" target="_blank" rel="noopener">Visit External Travel Site</a>
             </div>
           </div>
