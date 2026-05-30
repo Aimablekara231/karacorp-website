@@ -50,6 +50,12 @@
   --img-venture-consulting: url("../assets/ventures/consulting-hero.jpg");
   --img-venture-travel: url("../assets/ventures/travel-hero.jpg");
   --img-office: url("../assets/places/office.jpg");
+  --img-travel-hero: url("../assets/travel/hero.jpg");
+  --img-travel-kilimanjaro: url("../assets/travel/kilimanjaro.jpg");
+  --img-travel-serengeti: url("../assets/travel/serengeti.jpg");
+  --img-travel-ngorongoro: url("../assets/travel/ngorongoro.jpg");
+  --img-travel-tarangire: url("../assets/travel/tarangire.jpg");
+  --img-travel-arusha: url("../assets/travel/arusha.jpg");
   --gradient-hero: radial-gradient(circle at 12% 14%, rgba(var(--color-accent-2-rgb), 0.18), rgba(var(--color-accent-2-rgb), 0) 28%), radial-gradient(circle at 86% 18%, rgba(var(--color-primary-2-rgb), 0.9), rgba(var(--color-dark-rgb), 0.38) 34%, rgba(var(--color-dark-rgb), 0) 58%), radial-gradient(circle at 50% 88%, rgba(var(--color-accent-rgb), 0.12), rgba(var(--color-accent-rgb), 0) 35%), linear-gradient(135deg, var(--color-primary), var(--color-dark));
   --gradient-forest-band: linear-gradient(135deg, var(--color-primary), var(--color-dark));
   --font-display: "Cormorant Garamond", Georgia, serif;
@@ -2352,6 +2358,164 @@ body.is-leaving::after {
   gap: 20px;
 }
 
+.story-grid.story-grid-visual {
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  align-items: stretch;
+}
+
+.story-grid.story-grid-visual > .split-copy {
+  align-self: center;
+}
+
+.destination-grid,
+.story-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.story-grid-compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.destination-card,
+.story-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.destination-card-copy,
+.story-card-copy {
+  padding: 22px;
+}
+
+.destination-card-copy h3,
+.story-card-copy h3 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 1.66rem;
+  line-height: 1.08;
+}
+
+.destination-card-copy p,
+.story-card-copy p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.destination-media {
+  position: relative;
+  min-height: 228px;
+  background: var(--gradient-forest-band);
+  overflow: hidden;
+}
+
+.destination-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(165deg, rgba(var(--color-dark-rgb), 0.1), rgba(var(--color-dark-rgb), 0.48)),
+    radial-gradient(circle at 78% 20%, rgba(var(--color-accent-rgb), 0.18), rgba(var(--color-accent-rgb), 0) 24%),
+    linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.92), rgba(var(--color-dark-rgb), 0.86));
+  background-size: cover;
+  background-position: center;
+  transition: transform 620ms ease;
+}
+
+.destination-card:hover .destination-media::before {
+  transform: scale(1.06);
+}
+
+.destination-kilimanjaro::before {
+  background:
+    linear-gradient(165deg, rgba(var(--color-dark-rgb), 0.12), rgba(var(--color-dark-rgb), 0.5)),
+    var(--img-travel-kilimanjaro),
+    linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.92), rgba(var(--color-dark-rgb), 0.86));
+  background-size: cover;
+  background-position: center;
+}
+
+.destination-serengeti::before {
+  background:
+    linear-gradient(165deg, rgba(var(--color-dark-rgb), 0.14), rgba(var(--color-dark-rgb), 0.48)),
+    var(--img-travel-serengeti),
+    linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.92), rgba(var(--color-dark-rgb), 0.86));
+  background-size: cover;
+  background-position: center;
+}
+
+.destination-ngorongoro::before {
+  background:
+    linear-gradient(165deg, rgba(var(--color-dark-rgb), 0.14), rgba(var(--color-dark-rgb), 0.48)),
+    var(--img-travel-ngorongoro),
+    linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.92), rgba(var(--color-dark-rgb), 0.86));
+  background-size: cover;
+  background-position: center;
+}
+
+.destination-tarangire::before {
+  background:
+    linear-gradient(165deg, rgba(var(--color-dark-rgb), 0.14), rgba(var(--color-dark-rgb), 0.48)),
+    var(--img-travel-tarangire),
+    linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.92), rgba(var(--color-dark-rgb), 0.86));
+  background-size: cover;
+  background-position: center;
+}
+
+.destination-arusha::before {
+  background:
+    linear-gradient(165deg, rgba(var(--color-dark-rgb), 0.14), rgba(var(--color-dark-rgb), 0.48)),
+    var(--img-travel-arusha),
+    linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.92), rgba(var(--color-dark-rgb), 0.86));
+  background-size: cover;
+  background-position: center;
+}
+
+.destination-hero::before {
+  background:
+    linear-gradient(160deg, rgba(var(--color-dark-rgb), 0.18), rgba(var(--color-dark-rgb), 0.5)),
+    var(--img-travel-hero),
+    linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.92), rgba(var(--color-dark-rgb), 0.86));
+  background-size: cover;
+  background-position: center;
+}
+
+.service-stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.service-panel {
+  padding: 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.service-panel h3 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 1.74rem;
+}
+
+.service-panel p {
+  margin: 0 0 14px;
+  color: var(--color-muted);
+}
+
+.service-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
 .trust-panel h3,
 .leadership-card h3 {
   margin: 0;
@@ -2395,7 +2559,8 @@ body.is-leaving::after {
   .leadership-card,
   .founder-microsite,
   .nfc-panel,
-  .leadership-showcase {
+  .leadership-showcase,
+  .story-grid.story-grid-visual {
     grid-template-columns: 1fr;
   }
 }
@@ -2405,6 +2570,12 @@ body.is-leaving::after {
   .leadership-detail-grid,
   .founder-links-grid,
   .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-grid,
+  .story-grid-compact,
+  .service-stack {
     grid-template-columns: 1fr;
   }
 
