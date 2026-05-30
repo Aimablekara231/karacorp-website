@@ -1081,7 +1081,7 @@ textarea {
     radial-gradient(circle at 18% 18%, rgba(var(--color-accent-2-rgb), 0.28), transparent 30%),
     linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.92), rgba(var(--color-dark-rgb), 0.86));
   background-size: cover;
-  background-position: center;
+  background-position: center 24%;
 }
 
 .founder-vivian::before {
@@ -1091,7 +1091,7 @@ textarea {
     radial-gradient(circle at 18% 18%, rgba(var(--color-accent-2-rgb), 0.28), transparent 30%),
     linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.92), rgba(var(--color-dark-rgb), 0.86));
   background-size: cover;
-  background-position: center;
+  background-position: center 18%;
 }
 
 .founder-aimable::after { content: "Aimable Mhina Karamaga"; }
@@ -2215,7 +2215,7 @@ body.is-leaving::after {
   display: grid;
   grid-template-columns: minmax(200px, 0.78fr) minmax(0, 1.22fr);
   gap: 24px;
-  align-items: stretch;
+  align-items: center;
   padding: 24px;
 }
 
@@ -2241,6 +2241,13 @@ body.is-leaving::after {
 .founder-portrait-large,
 .profile-visual {
   min-height: 320px;
+}
+
+.leadership-card .founder-portrait-large {
+  width: 100%;
+  min-height: 0;
+  aspect-ratio: 5 / 4;
+  margin-bottom: 0;
 }
 
 .profile-hero {
@@ -2590,6 +2597,10 @@ body.is-leaving::after {
   .founder-portrait-large,
   .profile-visual {
     min-height: 260px;
+  }
+
+  .leadership-card .founder-portrait-large {
+    aspect-ratio: 4 / 3;
   }
 }
 
