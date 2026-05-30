@@ -45,6 +45,11 @@
   --color-grain-empty: rgba(var(--color-surface-rgb), 0);
   --color-focus-ring: rgba(var(--color-accent-rgb), 0.36);
   --hero-image: url("../assets/visuals/hero-arusha.svg");
+  --img-founder-aimable: url("../assets/founders/aimable.jpg");
+  --img-founder-vivian: url("../assets/founders/vivian.jpg");
+  --img-venture-consulting: url("../assets/ventures/consulting-hero.jpg");
+  --img-venture-travel: url("../assets/ventures/travel-hero.jpg");
+  --img-office: url("../assets/places/office.jpg");
   --gradient-hero: radial-gradient(circle at 12% 14%, rgba(var(--color-accent-2-rgb), 0.18), rgba(var(--color-accent-2-rgb), 0) 28%), radial-gradient(circle at 86% 18%, rgba(var(--color-primary-2-rgb), 0.9), rgba(var(--color-dark-rgb), 0.38) 34%, rgba(var(--color-dark-rgb), 0) 58%), radial-gradient(circle at 50% 88%, rgba(var(--color-accent-rgb), 0.12), rgba(var(--color-accent-rgb), 0) 35%), linear-gradient(135deg, var(--color-primary), var(--color-dark));
   --gradient-forest-band: linear-gradient(135deg, var(--color-primary), var(--color-dark));
   --font-display: "Cormorant Garamond", Georgia, serif;
@@ -968,9 +973,13 @@ textarea {
 
 .media-travel::before {
   background:
+    linear-gradient(165deg, rgba(var(--color-dark-rgb), 0.18), rgba(var(--color-dark-rgb), 0.42)),
+    var(--img-venture-travel),
     linear-gradient(165deg, transparent 0 42%, rgba(var(--color-accent-rgb), 0.46) 42% 45%, transparent 45%),
     radial-gradient(circle at 72% 22%, rgba(var(--color-accent-2-rgb), 0.5), transparent 18%),
     linear-gradient(140deg, var(--color-primary), var(--color-dark));
+  background-size: cover;
+  background-position: center;
 }
 
 .media-freshbox::before {
@@ -996,9 +1005,13 @@ textarea {
 
 .media-consulting::before {
   background:
+    linear-gradient(160deg, rgba(var(--color-dark-rgb), 0.26), rgba(var(--color-dark-rgb), 0.48)),
+    var(--img-venture-consulting),
     linear-gradient(120deg, transparent 0 32%, rgba(var(--color-accent-2-rgb), 0.24) 32% 34%, transparent 34%),
     radial-gradient(circle at 76% 26%, rgba(var(--color-surface-rgb), 0.18), transparent 20%),
     linear-gradient(140deg, var(--color-primary-2), var(--color-dark));
+  background-size: cover;
+  background-position: center;
 }
 
 .media-mining::before {
@@ -1010,9 +1023,13 @@ textarea {
 
 .media-office::before {
   background:
+    linear-gradient(150deg, rgba(var(--color-dark-rgb), 0.2), rgba(var(--color-dark-rgb), 0.44)),
+    var(--img-office),
     linear-gradient(90deg, transparent 0 15%, rgba(var(--color-surface-rgb), 0.12) 15% 18%, transparent 18% 34%, rgba(var(--color-surface-rgb), 0.1) 34% 38%, transparent 38%),
     radial-gradient(circle at 78% 22%, rgba(var(--color-accent-rgb), 0.26), transparent 22%),
     linear-gradient(140deg, var(--color-primary), var(--color-dark));
+  background-size: cover;
+  background-position: center;
 }
 
 .media-grain::after {
@@ -1051,13 +1068,28 @@ textarea {
   content: "Arusha office";
 }
 
-.founder-aimable::after {
-  content: "Aimable Mhina Karamaga";
+.founder-aimable::before {
+  background:
+    linear-gradient(160deg, rgba(var(--color-dark-rgb), 0.18), rgba(var(--color-dark-rgb), 0.44)),
+    var(--img-founder-aimable),
+    radial-gradient(circle at 18% 18%, rgba(var(--color-accent-2-rgb), 0.28), transparent 30%),
+    linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.92), rgba(var(--color-dark-rgb), 0.86));
+  background-size: cover;
+  background-position: center;
 }
 
-.founder-vivian::after {
-  content: "Vivian Bazil Deus";
+.founder-vivian::before {
+  background:
+    linear-gradient(160deg, rgba(var(--color-dark-rgb), 0.18), rgba(var(--color-dark-rgb), 0.44)),
+    var(--img-founder-vivian),
+    radial-gradient(circle at 18% 18%, rgba(var(--color-accent-2-rgb), 0.28), transparent 30%),
+    linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.92), rgba(var(--color-dark-rgb), 0.86));
+  background-size: cover;
+  background-position: center;
 }
+
+.founder-aimable::after { content: "Aimable Mhina Karamaga"; }
+.founder-vivian::after { content: "Vivian Bazil Deus"; }
 
 .venture-icon {
   width: 58px;

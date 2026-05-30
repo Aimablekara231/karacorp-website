@@ -11,11 +11,9 @@
 /company-profile /assets/company-profile.pdf 200
 /grain https://grain.karacorp.org 302
 /realty https://realty.karacorp.org 302
-/travel https://travel.karacorp.org 302
+/travel /travel.html 200
 /freshbox https://freshbox.karacorp.org 302
 /school https://school.karacorp.org 302
 /mind https://mind.karacorp.org 302
 /consulting /consulting.html 200
 /mining /mining.html 200
-https://aimable.karacorp.org/* /aimable.html 200
-https://vivian.karacorp.org/* /vivian.html 200
