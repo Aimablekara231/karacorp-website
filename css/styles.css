@@ -2523,6 +2523,185 @@ body.is-leaving::after {
   gap: 8px;
 }
 
+.card-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.digital-card {
+  position: relative;
+  min-height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(var(--color-surface-rgb), 0.98), rgba(var(--color-surface-soft-rgb), 0.96));
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.digital-card-frame {
+  padding: 20px;
+  background: linear-gradient(160deg, #0B2B1C, #12372A);
+  color: var(--color-surface);
+}
+
+.digital-card-frame.card-office {
+  background: linear-gradient(160deg, #102E23, #1B4332);
+}
+
+.digital-card-top,
+.digital-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.digital-card-mark {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.06em;
+}
+
+.digital-card-mark span {
+  display: block;
+  margin-top: 2px;
+  color: rgba(var(--color-accent-rgb), 0.64);
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.digital-card-ring {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--color-accent-rgb), 0.22);
+  display: grid;
+  place-items: center;
+}
+
+.digital-card-ring span {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--color-accent-rgb), 0.48);
+  display: grid;
+  place-items: center;
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.digital-card-name {
+  margin: 24px 0 4px;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  line-height: 1.04;
+}
+
+.digital-card-role {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.digital-card-rule {
+  width: 36px;
+  height: 1px;
+  margin: 14px 0 12px;
+  background: rgba(var(--color-accent-rgb), 0.9);
+}
+
+.digital-card-note {
+  margin: 0;
+  color: rgba(var(--color-surface-rgb), 0.7);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.digital-card-footer {
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.digital-card-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.digital-card-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(var(--color-accent-rgb), 0.08);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.22);
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.digital-card-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.digital-card-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.digital-card-action:hover,
+.digital-card-action:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--color-gold-line);
+  box-shadow: 0 12px 24px var(--color-shadow);
+}
+
+.digital-card-linkrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-hub-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 24px;
+  align-items: stretch;
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--radius-md) + 2px);
+  background: linear-gradient(180deg, rgba(var(--color-surface-rgb), 0.98), rgba(var(--color-surface-soft-rgb), 0.96));
+  box-shadow: var(--shadow-card);
+}
+
+.contact-hub-panel .service-list {
+  margin-top: 12px;
+}
+
 .trust-panel h3,
 .leadership-card h3 {
   margin: 0;
@@ -2567,7 +2746,8 @@ body.is-leaving::after {
   .founder-microsite,
   .nfc-panel,
   .leadership-showcase,
-  .story-grid.story-grid-visual {
+  .story-grid.story-grid-visual,
+  .contact-hub-panel {
     grid-template-columns: 1fr;
   }
 }
@@ -2576,13 +2756,15 @@ body.is-leaving::after {
   .leadership-grid,
   .leadership-detail-grid,
   .founder-links-grid,
-  .trust-grid {
+  .trust-grid,
+  .card-hub-grid {
     grid-template-columns: 1fr;
   }
 
   .destination-grid,
   .story-grid-compact,
-  .service-stack {
+  .service-stack,
+  .digital-card-actions {
     grid-template-columns: 1fr;
   }
 
