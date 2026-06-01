@@ -2537,12 +2537,42 @@ body.is-leaving::after {
   background: linear-gradient(180deg, rgba(var(--color-surface-rgb), 0.98), rgba(var(--color-surface-soft-rgb), 0.96));
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
+  perspective: 1200px;
 }
 
 .digital-card-frame {
   padding: 20px;
   background: linear-gradient(160deg, #0B2B1C, #12372A);
   color: var(--color-surface);
+}
+
+.digital-card.flip-card {
+  min-height: 360px;
+}
+
+.digital-card-inner {
+  position: relative;
+  min-height: 360px;
+  transform-style: preserve-3d;
+  transition: transform 420ms ease;
+}
+
+.digital-card.is-flipped .digital-card-inner,
+.digital-card.flip-card:hover .digital-card-inner,
+.digital-card.flip-card:focus-within .digital-card-inner {
+  transform: rotateY(180deg);
+}
+
+.digital-card-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: space-between;
+  backface-visibility: hidden;
+}
+
+.digital-card-face-back {
+  transform: rotateY(180deg);
 }
 
 .digital-card-frame.card-office {
@@ -2627,6 +2657,13 @@ body.is-leaving::after {
   line-height: 1.6;
 }
 
+.digital-card-caption {
+  margin: 0;
+  color: rgba(var(--color-surface-rgb), 0.74);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
 .digital-card-footer {
   padding: 20px;
   display: grid;
@@ -2658,6 +2695,7 @@ body.is-leaving::after {
   gap: 10px;
 }
 
+.digital-card-button,
 .digital-card-action {
   display: inline-flex;
   align-items: center;
@@ -2670,9 +2708,30 @@ body.is-leaving::after {
   color: var(--color-primary);
   font-size: 0.9rem;
   font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
+.digital-card-button {
+  width: fit-content;
+}
+
+.digital-card-button.is-accent {
+  background: rgba(var(--color-accent-rgb), 0.12);
+  border-color: rgba(var(--color-accent-rgb), 0.34);
+  color: var(--color-accent);
+}
+
+.digital-card-button.is-ghost {
+  background: transparent;
+  border-color: rgba(var(--color-surface-rgb), 0.18);
+  color: rgba(var(--color-surface-rgb), 0.84);
+}
+
+.digital-card-button:hover,
+.digital-card-button:focus-visible,
 .digital-card-action:hover,
 .digital-card-action:focus-visible {
   transform: translateY(-2px);
@@ -2684,6 +2743,11 @@ body.is-leaving::after {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.digital-card-linkrow.is-stack {
+  display: grid;
+  gap: 10px;
 }
 
 .contact-hub-panel {
@@ -2766,6 +2830,11 @@ body.is-leaving::after {
   .service-stack,
   .digital-card-actions {
     grid-template-columns: 1fr;
+  }
+
+  .digital-card.flip-card,
+  .digital-card-inner {
+    min-height: 332px;
   }
 
   .profile-hero {

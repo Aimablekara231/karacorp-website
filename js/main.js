@@ -209,6 +209,17 @@ trackedElements.forEach((element) => {
   });
 });
 
+document.querySelectorAll('[data-card-flip]').forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const card = event.currentTarget.closest('[data-digital-card]');
+    if (!card) return;
+    const isFlipped = card.classList.toggle('is-flipped');
+    card.querySelectorAll('[data-card-flip]').forEach((toggle) => {
+      toggle.setAttribute('aria-expanded', String(isFlipped));
+    });
+  });
+});
+
 if (!reduceMotion) {
   motionSurfaces.forEach((surface) => {
     surface.classList.add('is-motion-surface');
