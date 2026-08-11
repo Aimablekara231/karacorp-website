@@ -1,4 +1,5 @@
 document.documentElement.classList.add('js');
+const BRAND_LOGO_PATH = 'assets/brand/karacorp-logo.png';
 
 const header = document.querySelector('[data-header]');
 const navToggle = document.querySelector('[data-nav-toggle]');
@@ -15,6 +16,12 @@ const motionSurfaces = document.querySelectorAll('.venture-card, .founder-card, 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 document.body.classList.add('is-loading');
+
+const brandLogo = new Image();
+brandLogo.onload = () => {
+  document.documentElement.classList.add('has-brand-logo');
+};
+brandLogo.src = BRAND_LOGO_PATH;
 
 function updateHeaderState() {
   if (!header) return;

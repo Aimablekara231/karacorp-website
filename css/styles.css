@@ -1,4 +1,5 @@
 :root {
+  --brand-logo: url("../assets/brand/karacorp-logo.png");
   --color-primary: #12372A;
   --color-primary-2: #1B4332;
   --color-accent: #C99A2E;
@@ -49,6 +50,7 @@
   --img-founder-vivian: url("../assets/founders/vivian.jpg");
   --img-venture-consulting: url("../assets/ventures/consulting-hero.jpg");
   --img-venture-travel: url("../assets/ventures/travel-hero.jpg");
+  --img-venture-karaskin: url("../assets/ventures/karaskin-hero.jpg");
   --img-office: url("../assets/places/office.jpg");
   --img-travel-hero: url("../assets/travel/hero.jpg");
   --img-travel-kilimanjaro: url("../assets/travel/kilimanjaro.jpg");
@@ -225,6 +227,25 @@ textarea {
   font-weight: 700;
   color: var(--color-muted);
   text-transform: uppercase;
+}
+
+.has-brand-logo .brand {
+  min-width: 0;
+  gap: 0;
+}
+
+.has-brand-logo .brand-mark {
+  width: 170px;
+  height: 74px;
+  border-radius: 0;
+  background: var(--brand-logo) left center / contain no-repeat;
+  box-shadow: none;
+  color: transparent;
+  font-size: 0;
+}
+
+.has-brand-logo .brand-text {
+  display: none;
 }
 
 .nav-toggle {
@@ -1002,6 +1023,17 @@ textarea {
     linear-gradient(140deg, var(--color-primary-2), var(--color-dark));
 }
 
+.media-karaskin::before {
+  background:
+    linear-gradient(155deg, rgba(var(--color-dark-rgb), 0.16), rgba(var(--color-dark-rgb), 0.38)),
+    var(--img-venture-karaskin),
+    radial-gradient(circle at 24% 18%, rgba(var(--color-accent-2-rgb), 0.34), transparent 20%),
+    radial-gradient(circle at 78% 70%, rgba(var(--color-surface-rgb), 0.16), transparent 18%),
+    linear-gradient(145deg, rgba(152, 102, 64, 0.96), rgba(91, 56, 36, 0.94));
+  background-size: cover;
+  background-position: center;
+}
+
 .media-mind::before {
   background:
     radial-gradient(circle at 24% 28%, rgba(var(--color-accent-2-rgb), 0.34), transparent 16%),
@@ -1056,6 +1088,10 @@ textarea {
 
 .media-school::after {
   content: "Faith and learning";
+}
+
+.media-karaskin::after {
+  content: "Skincare commerce";
 }
 
 .media-mind::after {
@@ -1862,6 +1898,11 @@ textarea {
 
   .brand-subtitle {
     display: none;
+  }
+
+  .has-brand-logo .brand-mark {
+    width: 142px;
+    height: 62px;
   }
 
   .nav-toggle {
@@ -2766,6 +2807,262 @@ body.is-leaving::after {
   margin-top: 12px;
 }
 
+.karaskin-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.karaskin-panel,
+.karaskin-cart,
+.karaskin-note-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.karaskin-panel,
+.karaskin-note-card {
+  padding: 28px;
+}
+
+.karaskin-cart {
+  position: sticky;
+  top: 98px;
+  padding: 24px;
+}
+
+.karaskin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.karaskin-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 24px;
+}
+
+.karaskin-filter-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.karaskin-filter-button:hover,
+.karaskin-filter-button:focus-visible,
+.karaskin-filter-button.is-active {
+  transform: translateY(-2px);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.karaskin-product-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.karaskin-product-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(var(--color-accent-2-rgb), 0.3), transparent 22%),
+    linear-gradient(145deg, rgba(152, 102, 64, 0.96), rgba(91, 56, 36, 0.94));
+}
+
+.karaskin-product-media::after {
+  content: attr(data-media-label);
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  color: var(--color-surface);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-shadow: 0 2px 18px rgba(var(--color-dark-rgb), 0.42);
+}
+
+.karaskin-product-copy {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
+.karaskin-product-copy h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  line-height: 1.02;
+}
+
+.karaskin-product-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.karaskin-product-meta span,
+.karaskin-cart-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(var(--color-accent-rgb), 0.08);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.2);
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.karaskin-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.karaskin-price strong {
+  color: var(--color-primary);
+  font-size: 1.12rem;
+}
+
+.karaskin-price span {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.karaskin-actions {
+  display: grid;
+  grid-template-columns: minmax(96px, 110px) 1fr;
+  gap: 12px;
+}
+
+.karaskin-actions input {
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-soft);
+}
+
+.karaskin-subhead {
+  margin: 0 0 18px;
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  font-size: 2rem;
+}
+
+.karaskin-cart-items {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0 0;
+}
+
+.karaskin-cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  padding: 14px 0;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.karaskin-cart-item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.karaskin-cart-item h4,
+.karaskin-cart-empty h4 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.karaskin-cart-item p,
+.karaskin-cart-empty p,
+.karaskin-note-card p {
+  margin: 0;
+}
+
+.karaskin-cart-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.karaskin-cart-controls button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.karaskin-cart-summary {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.karaskin-summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.karaskin-summary-row strong {
+  color: var(--color-primary);
+}
+
+.karaskin-cart-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.karaskin-cart-form .form-grid {
+  grid-template-columns: 1fr;
+}
+
+.karaskin-cart-form .form-field.full {
+  grid-column: auto;
+}
+
+.karaskin-checkout-note {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.karaskin-cart-empty {
+  padding: 16px 0 4px;
+}
+
 .trust-panel h3,
 .leadership-card h3 {
   margin: 0;
@@ -2811,8 +3108,13 @@ body.is-leaving::after {
   .nfc-panel,
   .leadership-showcase,
   .story-grid.story-grid-visual,
-  .contact-hub-panel {
+  .contact-hub-panel,
+  .karaskin-shell {
     grid-template-columns: 1fr;
+  }
+
+  .karaskin-cart {
+    position: static;
   }
 }
 
@@ -2821,7 +3123,8 @@ body.is-leaving::after {
   .leadership-detail-grid,
   .founder-links-grid,
   .trust-grid,
-  .card-hub-grid {
+  .card-hub-grid,
+  .karaskin-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2835,6 +3138,10 @@ body.is-leaving::after {
   .digital-card.flip-card,
   .digital-card-inner {
     min-height: 332px;
+  }
+
+  .karaskin-actions {
+    grid-template-columns: 1fr;
   }
 
   .profile-hero {

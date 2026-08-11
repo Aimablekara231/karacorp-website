@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KaraSkin | Skincare Products and Direct Ordering</title>
+    <meta name="description" content="KaraSkin is a KaraCorp skincare and beauty brand with a simple product catalog, cart, and WhatsApp-first ordering flow for local delivery coordination.">
+    <link rel="canonical" href="https://karacorp.org/karaskin.html">
+    <link rel="icon" href="assets/brand/karacorp-logo.png" type="image/png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#12372A">
+    <meta property="og:title" content="KaraSkin">
+    <meta property="og:description" content="Simple skincare commerce under the KaraCorp group, with direct product ordering and WhatsApp-first checkout.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karacorp.org/karaskin.html">
+    <meta property="og:site_name" content="KaraCorp">
+    <meta property="og:image" content="https://karacorp.org/assets/brand/karacorp-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/karaskin-products.js" defer></script>
+    <script src="js/karaskin.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+    <header class="site-header" data-header>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="index.html#home" aria-label="KaraCorp home">
+          <span class="brand-mark">KC</span>
+          <span class="brand-text">
+            <span class="brand-name">KaraCorp</span>
+            <span class="brand-subtitle">Company Limited</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false" data-nav-toggle>
+          <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+        <ul class="nav-menu" id="primary-navigation" data-nav-menu>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="about.html#story">About</a></li>
+          <li><a href="leadership.html#leadership">Leadership</a></li>
+          <li><a href="ventures.html#ventures">Ventures</a></li>
+          <li><a href="partners.html#partners">Partners</a></li>
+          <li><a class="nav-cta" href="contact.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" data-karaskin-root data-whatsapp-number="255000000000">
+      <section class="page-hero reveal" id="karaskin">
+        <div class="container">
+          <h1>Simple skincare ordering, structured for direct delivery and better follow-up.</h1>
+          <p>KaraSkin is a KaraCorp beauty and skincare business built for product discovery, cart-based ordering, and local delivery coordination. Customers can browse, add products, and send an order through WhatsApp now, while the structure stays ready for stronger ecommerce systems later.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#shop">Shop Products</a>
+            <a class="btn btn-secondary" href="#cart">Open Cart</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="container story-grid story-grid-visual">
+          <div class="split-copy reveal">
+            <span class="section-label">Part of KaraCorp</span>
+            <h2>A separate skincare brand under the KaraCorp group.</h2>
+            <p>KaraSkin is structured as its own customer-facing commerce experience, but it still sits within the wider KaraCorp holding group. That gives the page its own brand voice while keeping the group identity, trust layer, and future operating systems connected.</p>
+            <p>The page is built so products can be replaced later by a backend or admin-managed catalog without redesigning the customer flow.</p>
+          </div>
+          <div class="venture-banner media-karaskin reveal" role="img" aria-label="KaraSkin skincare commerce visual"></div>
+        </div>
+      </section>
+
+      <section class="page-section alt">
+        <div class="container">
+          <div class="section-header center reveal">
+            <span class="section-label">Commerce Model</span>
+            <h2>Simple ecommerce now, stronger integrations later.</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <span class="feature-number">1</span>
+              <h3>Browse products</h3>
+              <p>Customers can review categories, product descriptions, and pricing or quote-based items in one simple catalog.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-number">2</span>
+              <h3>Build a cart</h3>
+              <p>Products can be added, adjusted, and reviewed before the order is sent.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-number">3</span>
+              <h3>Send order by WhatsApp</h3>
+              <p>The final request goes through WhatsApp for fast confirmation, delivery coordination, and custom-price follow-up.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-number">4</span>
+              <h3>Grow into payments later</h3>
+              <p>The structure can later connect to Stripe or another checkout system without rebuilding the whole storefront.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="shop">
+        <div class="container karaskin-shell">
+          <div class="karaskin-panel reveal">
+            <div class="section-header reveal">
+              <span class="section-label">Shop KaraSkin</span>
+              <h2>A product catalog built to become backend-ready later.</h2>
+              <p>Products on this page are rendered from structured data, which makes it easier to replace them later with backend-managed inventory, custom prices, or a fuller checkout flow.</p>
+            </div>
+            <div class="karaskin-filter-bar" aria-label="Filter KaraSkin products">
+              <button class="karaskin-filter-button is-active" type="button" data-skin-filter="all" aria-pressed="true">All products</button>
+              <button class="karaskin-filter-button" type="button" data-skin-filter="cleanse" aria-pressed="false">Cleanse</button>
+              <button class="karaskin-filter-button" type="button" data-skin-filter="treat" aria-pressed="false">Treat</button>
+              <button class="karaskin-filter-button" type="button" data-skin-filter="body" aria-pressed="false">Body care</button>
+              <button class="karaskin-filter-button" type="button" data-skin-filter="bundles" aria-pressed="false">Bundles</button>
+            </div>
+            <!-- PRODUCTS RENDER FROM js/karaskin-products.js -->
+            <div class="karaskin-grid" data-product-grid></div>
+          </div>
+
+          <aside class="karaskin-cart reveal" id="cart">
+            <span class="section-label">Cart</span>
+            <h2 class="karaskin-subhead">Order summary</h2>
+            <div class="karaskin-cart-meta">
+              <span><strong data-cart-count>0</strong>&nbsp;items</span>
+              <span>WhatsApp checkout</span>
+            </div>
+            <div class="karaskin-cart-items" data-cart-items></div>
+            <div class="karaskin-cart-summary" data-cart-summary hidden>
+              <div class="karaskin-summary-row">
+                <span>Estimated fixed total</span>
+                <strong data-cart-subtotal>TZS 0</strong>
+              </div>
+              <div class="karaskin-summary-row">
+                <span>Custom-priced items</span>
+                <span data-cart-custom>No custom-priced items in cart</span>
+              </div>
+            </div>
+            <form class="karaskin-cart-form" data-cart-form>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="karaskin-name">Full name</label>
+                  <input id="karaskin-name" name="full_name" type="text" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                  <label for="karaskin-phone">WhatsApp / phone</label>
+                  <input id="karaskin-phone" name="phone" type="tel" autocomplete="tel" required>
+                </div>
+                <div class="form-field">
+                  <label for="karaskin-area">Delivery area</label>
+                  <input id="karaskin-area" name="delivery_area" type="text" placeholder="e.g. Arusha town" required>
+                </div>
+                <div class="form-field">
+                  <label for="karaskin-contact">Preferred contact</label>
+                  <select id="karaskin-contact" name="contact_preference">
+                    <option>WhatsApp</option>
+                    <option>Phone call</option>
+                    <option>SMS</option>
+                  </select>
+                </div>
+                <div class="form-field full">
+                  <label for="karaskin-notes">Order notes</label>
+                  <textarea id="karaskin-notes" name="message" placeholder="Add delivery timing, product preference, skin concern, or any follow-up note."></textarea>
+                </div>
+              </div>
+              <p class="karaskin-checkout-note">Replace the WhatsApp number in this page when the live KaraSkin order line is ready.</p>
+              <button class="btn btn-primary" type="submit">Send Order via WhatsApp</button>
+              <p class="form-status" data-cart-status aria-live="polite"></p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page-section alt">
+        <div class="container trust-grid">
+          <article class="karaskin-note-card reveal">
+            <span class="section-label">Pricing</span>
+            <h3>Fixed-price and custom-price products can coexist.</h3>
+            <p>The catalog supports normal prices for standard items and quote-based entries for gift boxes, special bundles, or products that need confirmation before delivery.</p>
+          </article>
+          <article class="karaskin-note-card reveal">
+            <span class="section-label">Delivery</span>
+            <h3>Direct local coordination first.</h3>
+            <p>Orders are meant to be confirmed directly, then scheduled for delivery based on location, quantity, and any custom requirements.</p>
+          </article>
+          <article class="karaskin-note-card reveal">
+            <span class="section-label">Future Upgrade</span>
+            <h3>Prepared for better ecommerce later.</h3>
+            <p>This storefront can later connect to Stripe, stock tracking, admin-managed pricing, and stronger fulfillment logic without rewriting the customer-facing layout.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band reveal">
+        <div class="container">
+          <div class="cta-panel">
+            <div>
+              <h2>KaraSkin is built to start selling now without overbuilding too early.</h2>
+              <p>Use the catalog and WhatsApp order flow immediately, then connect a backend or payment gateway when the business is ready for the next step.</p>
+            </div>
+            <div class="section-actions">
+              <a class="btn btn-primary" href="#shop">Browse Products</a>
+              <a class="btn btn-secondary" href="ventures.html#karaskin">See KaraSkin in the portfolio</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="index.html#home" aria-label="KaraCorp home">
+            <span class="brand-mark">KC</span>
+            <span class="brand-text">
+              <span class="brand-name">KaraCorp</span>
+              <span class="brand-subtitle">Company Limited</span>
+            </span>
+          </a>
+          <p>KaraSkin is a commerce-focused beauty and skincare business under the KaraCorp group.</p>
+          <p>A registered company in Tanzania.</p>
+        </div>
+        <div>
+          <h2 class="footer-title">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="#karaskin">Overview</a></li>
+            <li><a href="#shop">Shop Products</a></li>
+            <li><a href="ventures.html#karaskin">Portfolio Position</a></li>
+            <li><a href="contact.html#contact">Group Contact</a></li>
+          </ul>
+          <h2 class="footer-title">Business Notes</h2>
+          <ul class="footer-links">
+            <li><a href="assets/karaskin/README.md">Product image guide</a></li>
+            <li><a href="consulting.html#consulting">Kara Consulting</a></li>
+            <li><a href="leadership.html#leadership">Leadership Hub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-title">Ordering</h2>
+          <ul class="footer-contact">
+            <li>WhatsApp-first checkout</li>
+            <li>Arusha, Tanzania</li>
+            <li><a href="mailto:info@karacorp.org">info@karacorp.org</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">Copyright 2026 Kara Corp Co Limited | All Rights Reserved</div>
+      </div>
+    </footer>
+    <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6M12 8v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </body>
+</html>

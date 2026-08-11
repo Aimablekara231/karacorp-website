@@ -8,9 +8,10 @@
   "theme_color": "#12372A",
   "icons": [
     {
-      "src": "/assets/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "/assets/brand/karacorp-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }
+
